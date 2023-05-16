@@ -12,5 +12,4 @@
 # 推送仓库
 git add .
 git commit -m "更新"
-git remote add origin https://github.com/1425821290/vuepress.git
 git push origin main
