@@ -1,0 +1,15 @@
+.links,.navbar {
+    background: transparent !important;
+}
+.links .iconfont {
+    font-size: 18px !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+.navbar {
+    backdrop-filter: blur(5px) !important;
+}
+
+.home-blog .hero {
+    margin: auto !important;
+}
