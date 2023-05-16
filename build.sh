@@ -16,5 +16,5 @@ git init
 git add .
 git commit -m "build"
 git branch -M main
-git remote add origin https://github.com/1425821290/yong-lt.github.io.git
+git remote add origin https://github.com/yong-lt/yong-lt.github.io.git
 git push origin main
