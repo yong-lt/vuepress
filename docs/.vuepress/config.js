@@ -61,6 +61,6 @@ module.exports = {
         "vuepress-plugin-cursor-effects": {
             size: 2, // size of the particle, default: 2
             zIndex: 999999999, // z-index property of the canvas, default: 999999999
-        },
+        }
     }
 }
