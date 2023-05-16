@@ -13,3 +13,8 @@
 .home-blog .hero {
     margin: auto !important;
 }
+
+.home-blog .hero h1 {
+    font-family: Long Cang,cursive !important;
+    font-size: 1.8667rem !important;
+}
