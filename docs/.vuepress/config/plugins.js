@@ -5,6 +5,7 @@ module.exports = {
             bottom: "100px",
             "z-index": "999999",
         },
+        autoShrink: true,
         audios: [
             {
                 name: "谢幕",

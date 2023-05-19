@@ -3,15 +3,14 @@
 }
 .links .iconfont {
     font-size: 18px !important;
-    color: #fff !important;
-    font-weight: 700 !important;
 }
 .navbar {
-    backdrop-filter: blur(5px) !important;
+    backdrop-filter: blur(3px) !important;
 }
 
 .home-blog .hero {
     margin: auto !important;
+    color: #fff;
 }
 
 .home-blog .hero h1 {
