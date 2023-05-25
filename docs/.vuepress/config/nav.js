@@ -36,6 +36,16 @@ module.exports = [
                         link: "/前端/React/Hook原理" 
                     },
                 ] 
+            },
+            { 
+                text: "Node", 
+                link: "/前端/Node/", 
+                items: [
+                    { 
+                        text: "Express使用", 
+                        link: "/前端/React/Express使用" 
+                    },
+                ] 
             }
         ],
     },
