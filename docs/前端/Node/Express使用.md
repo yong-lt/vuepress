@@ -165,6 +165,12 @@ app.listen(3000, () => console.log("Server running at http://localhost:3000/"));
 
 现在可以使用中间件就可以解决这个问题
 
+::: danger 注意
+
+一个中间件的处理是代码先后顺序，在中间件之前的处理，是不会执行的，`next`需要将此中间件的执行权交给下面的中间件，否则客户端会一直等待服务器的响应
+
+:::
+
 ```js
 const express = require("express");
 
@@ -186,3 +192,59 @@ app.post("/list", (req, res) => {
 
 app.listen(3000, () => console.log("Server running at http://localhost:3000/"));
 ```
+
+#### 应用程序级别中间件
+
+挂载在`app`实例上的
+
+#### 路由级别中间件
+
+```js
+app.get("/", (req, res) => {
+    res.send("get /");
+});
+
+app.post("/list", (req, res) => {
+    res.send("post /list");
+});
+```
+
+#### 错误处理中间件
+
+专门来捕获整个项目中发生的异常错误，防止服务器崩溃。错误级别的中间件，必须注册在所有路由之后，这样才能捕获错误信息
+
+```js
+app.get('/',(req, res, next) => {
+    try {
+		// ...
+    } catch (err) { 
+		next(err.message)
+    }
+})
+
+app.use((err, req, res, next) => {
+    console.log(err)
+})
+```
+
+#### 内置中间件
+
+```js
+// 解析 applicaton/json 格式数据
+app.use(express.json())
+// 解析 applicaton/x-www-form-urlencoded 格式数据
+app.use(express.urlencoded({extended: false}))
+// 解析 applicaton/octet-stream 格式数据
+app.use(express.raw())
+// 解析 text/plain 格式数据
+app.use(express.text())
+// 托管静态资源文件
+app.use(express.statis())
+```
+
+#### 第三方中间件
+
+```js
+app.use(cors())
+```
+
